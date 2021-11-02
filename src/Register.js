@@ -48,6 +48,7 @@ function Register() {
                     
                     <div class="row mb-3 px-3"> <input type="submit" class="btn btn-blue text-center" disabled={password!==confirmpassword} value="Register"/> </div>
                     <div class="row mb-4 px-3"> <small class="font-weight-bold">Already have an account? <Link to="/login" class="text-danger ">Login here</Link></small> </div>
+                    <div class="row mb-4 px-3"> <small class="font-weight-bold">Forgot Password? <Link to="/reset-password" class="text-danger ">Reset here</Link></small> </div>
                 </div>
                 </form>
             </div>

@@ -11,6 +11,8 @@ import Recipe from './Recipe';
 import MyRecipe from './MyRecipe';
 import AddRecipe from './AddRecipe';
 import Details from './Details';
+import ResetPassword from './ResetPassword';
+import Reset from './Reset';
 function App() {
   return (
     <div className="App">
@@ -18,6 +20,8 @@ function App() {
         <Switch>
           <Route path="/login" component={Login} exact={true}/>
           <Route path="/register" component={Register} exact={true}/>
+          <Route path="/reset-password" component={ResetPassword} exact={true}/>
+          <Route path="/reset" component={Reset} exact={true}/>
           <Route path="/" component={Welcome} exact={true}/>
           <Route path="/groceries"component={Groceries} exact={true}/>
           <Route path="/AddGrocery"component={AddGrocery} exact={true}/>

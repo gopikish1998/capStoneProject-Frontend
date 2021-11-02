@@ -2,10 +2,9 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom';
 import env from './settings';
-
-function Login() {
+function ResetPassword() {
     const [email, setEmail] = useState("");
-    const [password, setpassword] = useState("");
+    // const [password, setpassword] = useState("");
     const [message,setMessage]=useState(true);
     const [token,setToken]=useState(false);
     const history = useHistory()
@@ -13,12 +12,14 @@ function Login() {
     let handleSubmit= async function(e){
         e.preventDefault();
         try {
-            let logindata = await axios.post(`${env.api}/login`,{email,password});
+            let logindata = await axios.post(`${env.api}/forgot`,{email});
             if(logindata.data.message){
-                window.localStorage.setItem("app_token",logindata.data.token)
+                setMessage(true)
+                alert("Reset link sent on mail")
                 // console.log(logindata.data.user)
-                history.push(`/`)
-            }        
+                history.push(`/login`)
+            }
+
         } catch (error) {
             setMessage(false)
         }
@@ -27,7 +28,7 @@ function Login() {
         try {
             if(!window.localStorage.getItem("app_token")){
                 setToken(false)
-                console.log(token)
+                // console.log(token)
             }
             else{
                 setToken(true)
@@ -52,17 +53,17 @@ function Login() {
             <div class="col-lg-6">
             <form onSubmit={(e) => {handleSubmit(e)}}>
                 <div class="card2 card border-0 px-4 py-5">
-                    <h2>Login</h2>
-                    {message? <></>:<label style={{color:"red"}}>Username/Password is incorrect</label>}
+                    <h2>Reset Password</h2>
+                    {message? <></>:<label style={{color:"red"}}>Email not Registered</label>}
                     <div class="row px-3"> <label class="mb-1">
                             <h6 class="mb-0 text-sm">Email Address</h6>
-                        </label> <input value={email} onChange={e => setEmail(e.target.value)} class="form-control mb-4" type="email" placeholder="Enter a valid email address" required/> </div>
-                    <div class="row px-3"> <label class="mb-1">
+                        </label> <input value={email} onChange={e => setEmail(e.target.value)} class="form-control mb-4" type="email" placeholder="Enter your registered email address" required/> </div>
+                    {/* <div class="row px-3"> <label class="mb-1">
                             <h6 class="mb-0 text-sm">Enter Password</h6>
                         </label> <input value={password} onChange={e => setpassword(e.target.value)} class="form-control mb-4"  type="password" placeholder="Enter password" required/> </div>
-                        
+                         */}
                     
-                    <div class="row mb-3 px-3"> <input type="submit" class="btn btn-blue text-center" value="Login"/> </div>
+                    <div class="row mb-3 px-3"> <input type="submit" class="btn btn-blue text-center" value="Send Email"/> </div>
                     <div class="row mb-4 px-3"> <small class="font-weight-bold">Don't have an account? <Link to="/register" class="text-danger ">Register here</Link></small> </div>
                     <div class="row mb-4 px-3"> <small class="font-weight-bold">Forgot Password? <Link to="/reset-password" class="text-danger ">Reset here</Link></small> </div>
 
@@ -81,4 +82,4 @@ function Login() {
     )
 }
 
-export default Login
+export default ResetPassword
