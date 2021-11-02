@@ -13,13 +13,14 @@ import AddRecipe from './AddRecipe';
 import Details from './Details';
 import ResetPassword from './ResetPassword';
 import Reset from './Reset';
+import ResetNew from './ResetNew';
 function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
           <Route path="/login" component={Login} exact={true}/>
-          <Route path="/reset" component={Reset} exact={true}/>
+          <Route path="/reset" component={ResetNew} exact={true}/>
           <Route path="/register" component={Register} exact={true}/>
           <Route path="/reset-password" component={ResetPassword} exact={true}/>
           <Route path="/" component={Welcome} exact={true}/>
