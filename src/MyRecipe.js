@@ -82,7 +82,7 @@ function MyRecipe() {
                         <img src={`${obj.url}`} class="card-img-top" alt="Image"/>
                         <div class="card-body">
                             <h2 class="card-title">{obj.recipe}   <span ><img style={{height:"10px"}} src={obj.isVeg?"https://www.pngkey.com/png/detail/261-2619381_chitr-veg-symbol-svg-veg-and-non-veg.png":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsNOENdNsWdiIEaDAwwOOwCSBWjiS8GFPbiA&usqp=CAU"}/></span></h2>
-                            <p class="card-text">{obj.procedure}</p>
+                            {/* <p class="card-text">{obj.procedure}</p> */}
                         </div>
                         <div class="card-footer"><Link class="btn btn-primary btn-sm" to={`/recipe/${obj._id}`}>More Info</Link><button className="btn btn-sm btn-danger" onClick={()=>handleDelete(obj._id)} >DELETE</button></div>
                         
