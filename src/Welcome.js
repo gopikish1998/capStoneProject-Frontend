@@ -30,7 +30,7 @@ function Welcome() {
     return (
         <div>
              
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark" style={{background:"#1A00B2"}}>
             <div class="container px-5">
                 <Link class="navbar-brand" to="/">Recipe Manage</Link>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
