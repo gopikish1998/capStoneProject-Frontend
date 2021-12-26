@@ -48,15 +48,15 @@ function Details(props) {
         <div class="container px-5">
             <Link class="navbar-brand" to="/">Recipe Manage</Link>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            {token? <><div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item"><Link class="nav-link active" aria-current="page" to="/">Home</Link></li>
                     <li class="nav-item"><Link class="nav-link" to="/groceries">Manage Groceries</Link></li>
                     <li class="nav-item"><Link class="nav-link" to="/search">Recipes</Link></li>
                     <li class="nav-item"><Link class="nav-link" to="/my-recipe">Your Recipes</Link></li>
                 </ul>
-            </div>
-            {token? <><span class="navbar-brand">{name}</span>
+            </div><span class="navbar-brand">{name}</span>
             <button class="btn navbar-btn btn-danger navbar-right pull-right" role="button" onClick={() => {
       window.localStorage.removeItem("app_token");
       setToken(!token)
