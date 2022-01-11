@@ -94,7 +94,7 @@ function Recipe() {
                     
                     <div class="col-md-4 mb-5">
                     <div class="card h-100">
-                        <img src={`${obj.url}`} class="card-img-top" alt="Image"/>
+                            <img src={`${obj.url}`} style={ {height:"120px"}} class="card-img-top" alt="Image"/>
                         <div class="card-body">
                             <h2 class="card-title">{obj.recipe}   <span ><img style={{height:"20px"}} src={obj.isVeg?"https://www.pngkey.com/png/detail/261-2619381_chitr-veg-symbol-svg-veg-and-non-veg.png":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsNOENdNsWdiIEaDAwwOOwCSBWjiS8GFPbiA&usqp=CAU"}/></span></h2>
                             {/* <p class="card-text">{obj.procedure}</p> */}
