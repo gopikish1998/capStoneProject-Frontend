@@ -40,33 +40,33 @@ body {
   color: #000;
   overflow-x: hidden;
   height: 100%;
-  background-color: #16ff6f;
-  background-repeat: no-repeat
+  background-color: #71d7ff;
+  background-repeat: no-repeat;
 }
 
 .card0 {
   box-shadow: 0px 4px 8px 0px #757575;
-  border-radius: 0px
+  border-radius: 0px;
 }
 
 .card2 {
-  margin: 0px 40px
+  margin: 0px 40px;
 }
 
 .logo {
   width: 200px;
   height: 100px;
   margin-top: 20px;
-  margin-left: 35px
+  margin-left: 35px;
 }
 
 .image {
   width: 360px;
-  height: 280px
+  height: 280px;
 }
 
 .border-line {
-  border-right: 1px solid #EEEEEE
+  border-right: 1px solid #eeeeee;
 }
 
 .facebook {
@@ -77,61 +77,61 @@ body {
   border-radius: 50%;
   width: 35px;
   height: 35px;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .twitter {
-  background-color: #1DA1F2;
+  background-color: #1da1f2;
   color: #fff;
   font-size: 18px;
   padding-top: 5px;
   border-radius: 50%;
   width: 35px;
   height: 35px;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .linkedin {
-  background-color: #2867B2;
+  background-color: #2867b2;
   color: #fff;
   font-size: 18px;
   padding-top: 5px;
   border-radius: 50%;
   width: 35px;
   height: 35px;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .line {
   height: 1px;
   width: 45%;
-  background-color: #E0E0E0;
-  margin-top: 10px
+  background-color: #e0e0e0;
+  margin-top: 10px;
 }
 
 .or {
   width: 10%;
-  font-weight: bold
+  font-weight: bold;
 }
 
 .text-sm {
-  font-size: 14px !important
+  font-size: 14px !important;
 }
 
 ::placeholder {
-  color: #BDBDBD;
+  color: #bdbdbd;
   opacity: 1;
-  font-weight: 300
+  font-weight: 300;
 }
 
 :-ms-input-placeholder {
-  color: #BDBDBD;
-  font-weight: 300
+  color: #bdbdbd;
+  font-weight: 300;
 }
 
 ::-ms-input-placeholder {
-  color: #BDBDBD;
-  font-weight: 300
+  color: #bdbdbd;
+  font-weight: 300;
 }
 
 input,
@@ -143,9 +143,9 @@ textarea {
   margin-top: 2px;
   width: 100%;
   box-sizing: border-box;
-  color: #2C3E50;
+  color: #2c3e50;
   font-size: 14px;
-  letter-spacing: 1px
+  letter-spacing: 1px;
 }
 
 input:focus,
@@ -153,37 +153,37 @@ textarea:focus {
   -moz-box-shadow: none !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
-  border: 1px solid #304FFE;
-  outline-width: 0
+  border: 1px solid #304ffe;
+  outline-width: 0;
 }
 
 button:focus {
   -moz-box-shadow: none !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
-  outline-width: 0
+  outline-width: 0;
 }
 
 a {
   color: inherit;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .btn-blue {
-  background-color: #1A237E;
+  background-color: #1a237e;
   width: 150px;
   color: #fff;
-  border-radius: 2px
+  border-radius: 2px;
 }
 
 .btn-blue:hover {
   background-color: #000;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .bg-blue {
   color: #fff;
-  background-color: #1A237E
+  background-color: #1a237e;
 }
 /* 
 @media screen and (max-width: 991px) {
