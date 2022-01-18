@@ -27,7 +27,7 @@ function Details(props) {
             }})
             setData(data1.data)
             setIngredient(data1.data.ingredients.join(","))
-            console.log(data1)
+            // console.log(data1)
         } catch (error) {
             console.log(error)
         }
@@ -65,16 +65,18 @@ function Details(props) {
         </div>
         </nav>
         <div class="card">
-            <img src={`${data.url}`} class="card-img-top" alt="Recipe Image shown here" />
+            {/* <img src={`${data.url}`} style={ {height:"250px",width:"250px"}} class="card-img-top" alt="Recipe Image shown here" /> */}
+            <center><img src={`${data.url}`} style={ {height:"250px",width:"250px"}} class="card-img-top" alt="Recipe Image shown here" />
+            </center>
             <div class="card-body">
             <h5 class="card-title">{data.recipe}</h5>
             
                 {/* Ingredients: {data.ingredients.join(',')} */}
           
-            <p>Ingredients: {ingredient}</p>
+            <p><strong>Ingredients</strong>: {ingredient}</p>
           
-            <p class="card-text">
-                Procedure:{data.procedure}
+            <p class="card-text" style={{whiteSpace: "pre-wrap"}}>
+                <strong>Procedure</strong>:{data.procedure}
             </p>
   </div>
 </div>
